@@ -1,0 +1,113 @@
+<!-- チャットUI -->
+<div id="chat-container" style="border: 1px solid #ccc; padding: 15px; background: #f9f9f9;">
+<h4>AIチャットボット</h4>
+
+<div id="chat-log" style="background: white; border: 1px solid #ddd; padding: 10px; height: 500px; overflow-y: auto; margin-bottom: 15px;">
+<div style="color: #666; font-style: italic;">AIとの会話がここに表示されます...</div>
+</div>
+
+<div style="display: flex; gap: 10px;"><input id="user-input" placeholder="メッセージを入力..." style="flex: 1; padding: 8px; border: 1px solid #ccc;" type="text" /><button id="send-btn" onclick="sendMessage()" style="padding: 8px 15px; background: #007cba; color: white; border: none; cursor: pointer;" type="button">送信</button></div>
+<!-- 隠しフィールド --><input id="assigned_condition" name="assigned_condition" type="hidden" value="" /> <input id="chat_data" name="chat_data" type="hidden" value="" /></div>
+<script>
+// === 設定 ===
+const API_URL = "https://psych-research-api-useminarfukuda.replit.app/api/chat";
+
+let chatHistory = [];
+let messageCount = 0;
+
+// === 条件をランダム割り当て（初回のみ）===
+(function assignConditionOnce() {
+  const field = document.getElementById('assigned_condition');
+  if (!field.value) {
+    const conditions = ['condition_a', 'condition_b', 'condition_c'];
+    const assigned = conditions[Math.floor(Math.random() * conditions.length)];
+    field.value = assigned;
+  }
+})();
+
+// === メッセージ送信処理 ===
+async function sendMessage() {
+  const input = document.getElementById('user-input');
+  const log = document.getElementById('chat-log');
+  const sendBtn = document.getElementById('send-btn');
+  const message = input.value.trim();
+  const condition = document.getElementById('assigned_condition').value;
+
+  if (!message) return;
+
+  sendBtn.disabled = true;
+  sendBtn.textContent = '送信中...';
+
+  if (messageCount === 0) log.innerHTML = '';
+
+  log.innerHTML += '<div style="margin: 10px 0; text-align: right;">' +
+    '<div style="background: #007cba; color: white; padding: 8px 12px; border-radius: 15px; display: inline-block; max-width: 70%;">' +
+    '<strong>あなた:</strong> ' + message + '</div></div>';
+  input.value = '';
+  log.scrollTop = log.scrollHeight;
+
+  log.innerHTML += '<div id="typing-indicator" style="margin: 10px 0;">' +
+    '<div style="background: #f0f0f0; padding: 8px 12px; border-radius: 15px; display: inline-block;">' +
+    '<em>AIが入力中...</em></div></div>';
+  log.scrollTop = log.scrollHeight;
+
+  try {
+    const res = await fetch(API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        message: message,
+        condition: condition
+      })
+    });
+
+    const data = await res.json();
+    const reply = data.success ? data.reply : 'AIの応答取得に失敗しました。';
+
+    document.getElementById('typing-indicator').remove();
+
+    log.innerHTML += '<div style="margin: 10px 0;">' +
+      '<div style="background: #e8f4f8; padding: 8px 12px; border-radius: 15px; display: inline-block; max-width: 70%;">' +
+      '<strong>AI:</strong> ' + reply + '</div></div>';
+    log.scrollTop = log.scrollHeight;
+
+    chatHistory.push({
+      user: message,
+      ai: reply,
+      timestamp: new Date().toISOString(),
+      messageNumber: messageCount + 1,
+      condition: condition
+    });
+
+    document.getElementById('chat_data').value = JSON.stringify(chatHistory);
+    messageCount++;
+
+  } catch (error) {
+    console.error('API通信エラー:', error);
+    document.getElementById('typing-indicator').remove();
+
+    log.innerHTML += '<div style="margin: 10px 0;">' +
+      '<div style="background: #ffe6e6; padding: 8px 12px; border-radius: 15px; display: inline-block; max-width: 70%;">' +
+      '<strong>AI:</strong> サーバーとの通信に失敗しました。</div></div>';
+  } finally {
+    sendBtn.disabled = false;
+    sendBtn.textContent = '送信';
+  }
+}
+
+// === Enterキー送信 ===
+document.getElementById('user-input').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    sendMessage();
+  }
+});
+
+// === 初期メッセージ ===
+setTimeout(function() {
+  const log = document.getElementById('chat-log');
+  log.innerHTML = '<div style="margin: 10px 0;">' +
+    '<div style="background: #e8f4f8; padding: 8px 12px; border-radius: 15px; display: inline-block; max-width: 70%;">' +
+    '<strong>AI:</strong> こんにちは！何でもお気軽に質問してください。</div></div>';
+}, 500);
+</script>
