@@ -15,6 +15,18 @@ const API_URL = "https://psych-research-api-useminarfukuda.replit.app/api/chat";
 let chatHistory = [];
 let messageCount = 0;
 
+// === HTMLエスケープ（表示用）===
+// 記録用の chatHistory には生のテキストをそのまま保存し、
+// チャットログへ描画するときだけエスケープする。
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 // === 条件をランダム割り当て（初回のみ）===
 (function assignConditionOnce() {
   const field = document.getElementById('assigned_condition');
@@ -42,7 +54,7 @@ async function sendMessage() {
 
   log.innerHTML += '<div style="margin: 10px 0; text-align: right;">' +
     '<div style="background: #007cba; color: white; padding: 8px 12px; border-radius: 15px; display: inline-block; max-width: 70%;">' +
-    '<strong>あなた:</strong> ' + message + '</div></div>';
+    '<strong>あなた:</strong> ' + escapeHtml(message) + '</div></div>';
   input.value = '';
   log.scrollTop = log.scrollHeight;
 
@@ -68,7 +80,7 @@ async function sendMessage() {
 
     log.innerHTML += '<div style="margin: 10px 0;">' +
       '<div style="background: #e8f4f8; padding: 8px 12px; border-radius: 15px; display: inline-block; max-width: 70%;">' +
-      '<strong>AI:</strong> ' + reply + '</div></div>';
+      '<strong>AI:</strong> ' + escapeHtml(reply) + '</div></div>';
     log.scrollTop = log.scrollHeight;
 
     chatHistory.push({
