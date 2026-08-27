@@ -1,0 +1,24 @@
+study,variable,label,values,scale,role,notes
+S3a,participant_id,Participant ID (sequential),1–N,,ID,Anonymous sequential ID for public release
+S3a,date,Response date (date only),YYYY-MM-DD,,metadata,Time removed
+S3a,hour,Response start hour,0–23,,metadata,Minutes/seconds removed
+S3a,condition,Experimental condition,1–2,,IV,"1=purchased/comparable price, 2=complimentary magazine gift"
+S3a,nft_interest,Interest in NFT,numeric,,demographic,
+S3a,nft_purchase_exp,NFT purchase experience,1–3,,demographic,
+S3a,C1,(undocumented),,,undocumented,Present in study3a_public.csv but absent from the original codebook; label to be supplied by the authors
+S3a,S1,(undocumented),,,undocumented,Present in study3a_public.csv but absent from the original codebook; label to be supplied by the authors
+S3a,monetization_intent,Inferred monetization intent (single item),1–7,7-point Likert,exploratory,Single author-developed item used only in the exploratory serial mediation in SI C. NOT a manipulation check
+S3a,attention_1,Attention check (correct=1),numeric,,attention_check,Exclusion criterion: exclude if not 1. Excludes participants 12 and 61 (N=140 -> 138)
+S3a,F1,(undocumented),,,undocumented,Present in study3a_public.csv but absent from the original codebook; label to be supplied by the authors
+S3a,fail_inf_1,Failure inference item 1,1–7,7-point Likert,item,
+S3a,fail_inf_2,Failure inference item 2,1–7,7-point Likert,item,
+S3a,fail_inf_3,Failure inference item 3,1–7,7-point Likert,item,
+S3a,LOB_item1,LOB item 1,1–7,7-point Likert,item,
+S3a,LOB_item2,LOB item 2,1–7,7-point Likert,item,
+S3a,LOB_item3,LOB item 3,1–7,7-point Likert,item,
+S3a,I1,(undocumented),,,undocumented,Present in study3a_public.csv but absent from the original codebook; label to be supplied by the authors
+S3a,sex,Sex,numeric,,demographic,
+S3a,age,Age category,numeric,,demographic,
+S3a,I2,(undocumented),,,undocumented,Present in study3a_public.csv but absent from the original codebook; label to be supplied by the authors
+S3a,LOB,Loss of brand luxuriousness (3-item mean),continuous,7-point Likert,DV,"alpha=.952 (analytic sample, N=138); mean(LOB_item1, LOB_item2, LOB_item3); PROCESS Model 4: Y"
+S3a,failure_inference,Failure inference (3-item mean),continuous,7-point Likert,mediator,"alpha=.911 (analytic sample, N=138); mean(fail_inf_1, fail_inf_2, fail_inf_3); PROCESS Model 4: M"

@@ -1,0 +1,27 @@
+study,variable,label,values,scale,role,notes
+S3c,participant_id,Participant ID (sequential),1–N,,ID,Anonymous sequential ID for public release
+S3c,date,Response date (date only),YYYY-MM-DD,,metadata,Time removed
+S3c,hour,Response start hour,0–23,,metadata,Minutes/seconds removed
+S3c,condition,Experimental condition,1–4,,IV,"1=official brand website + comparable price, 2=official brand website + free, 3=news article + comparable price, 4=news article + free"
+S3c,free_dummy,Condition dummy,"0=comparable price, 1=distributed for free",,IV_factor,PROCESS Model 7: X
+S3c,source_official,Source dummy,"0=news article, 1=official brand website",,IV_factor,"PROCESS Model 7: W. RENAMED 2026-08-27 from low_flagship, which was reused from Study 3b and named for a manipulation this study does not run; the values are unchanged"
+S3c,nft_interest,Interest in NFT,numeric,,demographic,
+S3c,nft_purchase_exp,NFT purchase experience,1–3,,demographic,
+S3c,S1,(undocumented),,,undocumented,Present in study3c_public.csv but absent from the original codebook; label to be supplied by the authors
+S3c,F1,(undocumented),,,undocumented,Present in study3c_public.csv but absent from the original codebook; label to be supplied by the authors
+S3c,F2,(undocumented),,,undocumented,Present in study3c_public.csv but absent from the original codebook; label to be supplied by the authors
+S3c,flagship_item,Ancillary flagship-product item (single item),1–7,7-point Likert,ancillary,Administered but not analysed. A source manipulation-specific check was NOT administered in Study 3c (SI H-2). RENAMED 2026-08-27 from Flagshipness_MC
+S3c,attention_1,Attention check (correct=1),numeric,,attention_check,"Exclusion criterion: exclude if not 1. Excludes participants 89, 170, 171, 238, 272 (N=287 -> 282)"
+S3c,F3,(undocumented),,,undocumented,Present in study3c_public.csv but absent from the original codebook; label to be supplied by the authors
+S3c,F4,(undocumented),,,undocumented,Present in study3c_public.csv but absent from the original codebook; label to be supplied by the authors
+S3c,fail_inf_1,Failure inference item 1,1–7,7-point Likert,item,Corrected 2026-08-27: the original codebook labelled this item 3
+S3c,fail_inf_2,Failure inference item 2,1–7,7-point Likert,item,Corrected 2026-08-27: the original codebook labelled this item 4
+S3c,fail_inf_3,Failure inference item 3,1–7,7-point Likert,item,Corrected 2026-08-27: the original codebook labelled this item 5
+S3c,LOB_item1,LOB item 1,1–7,7-point Likert,item,
+S3c,LOB_item2,LOB item 2,1–7,7-point Likert,item,
+S3c,LOB_item3,LOB item 3,1–7,7-point Likert,item,
+S3c,sex,Sex,numeric,,demographic,
+S3c,age,Age category,numeric,,demographic,
+S3c,I1,(undocumented),,,undocumented,Present in study3c_public.csv but absent from the original codebook; label to be supplied by the authors
+S3c,LOB,Loss of brand luxuriousness (3-item mean),continuous,7-point Likert,DV,"alpha=.942 (analytic sample, N=282); mean(LOB_item1, LOB_item2, LOB_item3); PROCESS Model 7: Y. Corrected 2026-08-27: the original codebook repeated the Failure Inference alpha (.866) here"
+S3c,failure_inference,Failure inference (3-item mean),continuous,7-point Likert,mediator,"alpha=.866 (analytic sample, N=282); mean(fail_inf_1, fail_inf_2, fail_inf_3); PROCESS Model 7: M"

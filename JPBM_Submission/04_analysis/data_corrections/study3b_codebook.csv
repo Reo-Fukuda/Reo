@@ -1,0 +1,29 @@
+study,variable,label,values,scale,role,notes
+S3b,participant_id,Participant ID (sequential),1–N,,ID,Anonymous sequential ID for public release
+S3b,date,Response date (date only),YYYY-MM-DD,,metadata,Time removed
+S3b,hour,Response start hour,0–23,,metadata,Minutes/seconds removed
+S3b,condition,Experimental condition,1–4,,IV,"1=central GG logo + comparable price, 2=central GG logo + complimentary fan-book gift, 3=bee image + comparable price, 4=bee image + complimentary fan-book gift"
+S3b,free_dummy,Condition dummy,"0=comparable price, 1=complimentary fan-book gift",,IV_factor,PROCESS Model 7: X
+S3b,central_logo,Image dummy,"0=bee image with a small logo, 1=central GG logo",,IV_factor,"PROCESS Model 7: W. RENAMED 2026-08-27 from low_flagship, whose name read as the opposite of its coding; the values are unchanged"
+S3b,nft_interest,Interest in NFT,numeric,,demographic,
+S3b,nft_purchase_exp,NFT purchase experience,1–3,,demographic,
+S3b,C1,(undocumented),,,undocumented,Present in study3b_public.csv but absent from the original codebook; label to be supplied by the authors
+S3b,S1,(undocumented),,,undocumented,Present in study3b_public.csv but absent from the original codebook; label to be supplied by the authors
+S3b,F1,(undocumented),,,undocumented,Present in study3b_public.csv but absent from the original codebook; label to be supplied by the authors
+S3b,F2,(undocumented),,,undocumented,Present in study3b_public.csv but absent from the original codebook; label to be supplied by the authors
+S3b,flagship_item,Ancillary flagship-product item (single item),1–7,7-point Likert,ancillary,"""I think this NFT is the flagship product of the brand"" (Hubert et al., 2017). Reported in SI H-2 as an ancillary single-item judgment, NOT as a manipulation check. RENAMED 2026-08-27 from Flagshipness_MC"
+S3b,attention_1,Attention check (correct=1),numeric,,attention_check,Exclusion criterion: exclude if not 1. Excludes participant 105 (N=282 -> 281)
+S3b,F3,(undocumented),,,undocumented,Present in study3b_public.csv but absent from the original codebook; label to be supplied by the authors
+S3b,F4,(undocumented),,,undocumented,Present in study3b_public.csv but absent from the original codebook; label to be supplied by the authors
+S3b,fail_inf_1,Failure inference item 1,1–7,7-point Likert,item,
+S3b,fail_inf_2,Failure inference item 2,1–7,7-point Likert,item,
+S3b,fail_inf_3,Failure inference item 3,1–7,7-point Likert,item,
+S3b,LOB_item1,LOB item 1,1–7,7-point Likert,item,
+S3b,LOB_item2,LOB item 2,1–7,7-point Likert,item,
+S3b,LOB_item3,LOB item 3,1–7,7-point Likert,item,
+S3b,I1,(undocumented),,,undocumented,Present in study3b_public.csv but absent from the original codebook; label to be supplied by the authors
+S3b,sex,Sex,numeric,,demographic,
+S3b,age,Age category,numeric,,demographic,
+S3b,I2,(undocumented),,,undocumented,Present in study3b_public.csv but absent from the original codebook; label to be supplied by the authors
+S3b,LOB,Loss of brand luxuriousness (3-item mean),continuous,7-point Likert,DV,"alpha=.954 (analytic sample, N=281); mean(LOB_item1, LOB_item2, LOB_item3); PROCESS Model 7: Y"
+S3b,failure_inference,Failure inference (3-item mean),continuous,7-point Likert,mediator,"alpha=.873 (analytic sample, N=281); mean(fail_inf_1, fail_inf_2, fail_inf_3); PROCESS Model 7: M"
