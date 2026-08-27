@@ -353,7 +353,7 @@ Simple slopes: The negative association with the Paid classification was larger 
 
 GEE (negative posts): The odds ratio for Paid was 1.24 (95\% CI {[}1.01, 1.51{]}, \emph{p} = .041).
 
-Full coefficient estimates appear in Tables G1 and G2.
+Full coefficient estimates appear in Tables F1 and F2.
 \setcounter{table}{0}
 \renewcommand{\thetable}{F\arabic{table}}
 \renewcommand{\theHtable}{F\arabic{table}}
@@ -436,19 +436,126 @@ Study 3c did not include a source manipulation-specific check. The same flagship
 
 The free or complimentary condition was implemented differently across studies (main-text Table 2): plain free distribution in Study 1; a complimentary gift with a fashion magazine in Studies 2 and 3a (chosen because an outright giveaway by a luxury brand lacked scenario plausibility for a physical product); a complimentary gift with a fan book in Study 3b; and plain free distribution in the text-only Study 3c scenarios. One preregistration deviation follows from this: the Study 3c preregistration described the free condition as a fan-book bonus, whereas the implemented scenario presented plain free distribution. Two consequences for interpretation are drawn consistently in the main text. First, each study's result is interpreted at the level of its implemented contrast, and the implementations are never pooled as a single treatment. Second, the recurrence of the first-stage pattern of H3a across these different implementations (Study 3a; the bee image in Study 3b; the news article in Study 3c) is read as conceptual replication of the direction of the effect, not as replication of a single quantitative effect.
 
-% TODO(construct-validity): OUTSTANDING BEFORE SUBMISSION — requires item-level
-% data, not new prose. Reviewer (2026-08-27) asks for discriminant validity
-% between measures collected at the same time from the same respondents with
-% similarly negative wording: Loss of Product Luxuriousness vs Loss of Brand
-% Luxuriousness (Study 2), and Failure Inference vs Loss of Brand Luxuriousness
-% (Studies 3a-3c). Add to this section: (1) two-factor vs one-factor CFA,
-% (2) inter-factor correlations, (3) AVE or HTMT, (4) per-study means, SDs and
-% correlation matrix. Also consider renaming Failure Inference to Perceived
-% Launch Failure or Launch-Failure Judgment, which describes the items more
-% directly; if the current name is kept, sharpen the first-mention definition to
-% say it measures the degree to which the launch itself is judged a failure
-% given the displayed outcome, not an inference about the cause of failure.
-\SIMajorHeading{H-4. X Data: Retrieval Pipeline and Audit Status}
+\SIMajorHeading{H-4. Discriminant Validity of the Measured Constructs}
+
+Several of the measures analysed together were collected from the same respondents within a single questionnaire and share negatively valenced wording. This raises the question of whether they behave as distinct constructs or largely as one general negative reaction. This section reports confirmatory factor analyses and discriminant-validity indices for the two pairings that enter the mediation models: Loss of Product Luxuriousness with Loss of Brand Luxuriousness in Study 2, and Failure Inference with Loss of Brand Luxuriousness in Studies 3a--3c.
+
+Each model was estimated by maximum likelihood on that study's attention-check-passed analytic sample, with factor variances fixed at unity and each item free to load only on its assigned factor. Because these are six-indicator models with eight degrees of freedom, we report CFI, TLI and SRMR alongside RMSEA: in models with few degrees of freedom RMSEA tends to be inflated and to reject correctly specified models, so it is best read together with the other indices rather than on its own (Kenny et al., 2015). Table H1 compares the fit of the hypothesised two-factor model with a one-factor alternative in which all six items load on a single factor.
+
+\setcounter{table}{0}
+\renewcommand{\thetable}{H\arabic{table}}
+\renewcommand{\theHtable}{H\arabic{table}}
+
+\begin{table}[H]
+\centering
+\begin{singlespace}
+\caption{Confirmatory Factor Analysis: Two-Factor Versus One-Factor Models}
+\begin{tabular}{@{}llrrrrrr@{}}
+\toprule
+Study & Model & $\chi^2$ & \emph{df} & CFI & TLI & RMSEA & SRMR \\
+\midrule
+Study 2 (\emph{N} = 280) & Two-factor & 12.01 & 8 & .997 & .995 & .042 & .016 \\
+ & One-factor & 192.60\textsuperscript{*} & 9 & .873 & .788 & .270 & .109 \\
+\addlinespace
+Study 3a (\emph{N} = 138) & Two-factor & 15.65\textsuperscript{*} & 8 & .990 & .982 & .084 & .042 \\
+ & One-factor & 237.58\textsuperscript{*} & 9 & .708 & .513 & .431 & .189 \\
+\addlinespace
+Study 3b (\emph{N} = 281) & Two-factor & 22.74\textsuperscript{*} & 8 & .990 & .981 & .081 & .035 \\
+ & One-factor & 361.03\textsuperscript{*} & 9 & .758 & .597 & .374 & .172 \\
+\addlinespace
+Study 3c (\emph{N} = 282) & Two-factor & 43.73\textsuperscript{*} & 8 & .975 & .953 & .126 & .061 \\
+ & One-factor & 285.24\textsuperscript{*} & 9 & .807 & .678 & .330 & .114 \\
+\addlinespace
+\bottomrule
+\end{tabular}
+\raggedright\emph{Note.} Maximum-likelihood estimation on each study's attention-check-passed sample. \textsuperscript{*}\emph{p} \textless{} .05. The one-factor model is the two-factor model with the factor correlation fixed at unity; the two are therefore nested and differ by one degree of freedom. Difference tests appear in the text.
+\end{singlespace}
+\end{table}
+
+The two-factor model fitted better in every study, and by a wide margin: Study 2 $\Delta\chi^2$(1) = 180.60; Study 3a $\Delta\chi^2$(1) = 221.93; Study 3b $\Delta\chi^2$(1) = 338.30; Study 3c $\Delta\chi^2$(1) = 241.51, all \emph{p} \textless{} .001. In each case the one-factor solution also fell below conventional thresholds on CFI and SRMR, whereas the two-factor solution met them.
+
+\begin{table}[H]
+\centering
+\begin{singlespace}
+\caption{Reliability and Discriminant Validity by Study}
+\small
+\begin{tabular}{@{}llrrrrr@{}}
+\toprule
+Study & Construct & $\lambda$ range & $\alpha$ & CR & AVE & $\sqrt{\text{AVE}}$ \\
+\midrule
+Study 2 & Loss of Product Luxuriousness & .743--.904 & .849 & .855 & .664 & .815 \\
+ & Loss of Brand Luxuriousness & .933--.943 & .957 & .958 & .883 & .940 \\
+ & \multicolumn{6}{l}{\emph{Factor correlation} $\varphi$ = .708; HTMT = .722} \\
+\addlinespace
+Study 3a & Failure Inference & .817--.949 & .911 & .916 & .785 & .886 \\
+ & Loss of Brand Luxuriousness & .893--.964 & .952 & .954 & .873 & .934 \\
+ & \multicolumn{6}{l}{\emph{Factor correlation} $\varphi$ = .541; HTMT = .582} \\
+\addlinespace
+Study 3b & Failure Inference & .708--.917 & .873 & .880 & .711 & .844 \\
+ & Loss of Brand Luxuriousness & .905--.951 & .954 & .954 & .874 & .935 \\
+ & \multicolumn{6}{l}{\emph{Factor correlation} $\varphi$ = .543; HTMT = .565} \\
+\addlinespace
+Study 3c & Failure Inference & .697--.930 & .866 & .882 & .716 & .846 \\
+ & Loss of Brand Luxuriousness & .911--.924 & .942 & .942 & .845 & .919 \\
+ & \multicolumn{6}{l}{\emph{Factor correlation} $\varphi$ = .674; HTMT = .728} \\
+\addlinespace
+\bottomrule
+\end{tabular}
+\raggedright\emph{Note.} $\lambda$ = standardised loading; CR = composite reliability; AVE = average variance extracted; HTMT = heterotrait--monotrait ratio of correlations. Every standardised loading was .697 or higher; the smallest ratio of an unstandardised loading to its asymptotic standard error was 11.45, so all loadings were significant at \emph{p} \textless{} .001.
+\end{singlespace}
+\end{table}
+
+Three indices point the same way. The latent factor correlations ranged from .541 to .708: substantial, as one would expect of judgments formed in the same session about the same offering, but well short of unity. Average variance extracted exceeded .50 for every construct (range .664 to .883), and in each study the square root of the average variance extracted for both constructs exceeded their correlation, satisfying the Fornell and Larcker (1981) criterion. The heterotrait--monotrait ratio ranged from .565 to .728, below the .85 threshold recommended by Henseler et al. (2015) in every study.
+
+Two qualifications belong with these results. First, RMSEA for the two-factor models ranged from .042 to .126, exceeding .08 in Studies 3a--3c even though CFI, TLI and SRMR indicated close fit in the same models. This pattern is characteristic of models with few degrees of freedom rather than an indication of a mis-specified factor structure, and we report it rather than selecting indices that favour the model. Second, the evidence here concerns discriminant validity between the measures as scored; it does not establish that Failure Inference captures a causal attribution, and we do not claim that it does (Section H-2 and the main-text limitations).
+
+Study 2 also measured Inferred Cost as a check on the product-form difference. A three-factor model including it fitted well ($\chi^2$(24) = 45.17, CFI = .990, TLI = .985, RMSEA = .056, SRMR = .036; $\alpha$ = .907), with Inferred Cost correlating $\varphi$ = -.611 with Loss of Product Luxuriousness and $\varphi$ = -.377 with Loss of Brand Luxuriousness.
+
+\begin{table}[H]
+\centering
+\begin{singlespace}
+\caption{Item Means, Standard Deviations and Correlations by Study}
+\begin{tabular}{@{}llrrrrrrrr@{}}
+\toprule
+Study & Item & \emph{M} & \emph{SD} & 1 & 2 & 3 & 4 & 5 & 6 \\
+\midrule
+Study 2 & LPL1 & 3.49 & 1.69 & 1.000 &  &  &  &  &  \\
+ & LPL2 & 3.38 & 1.72 & .717 & 1.000 &  &  &  &  \\
+ & LPL3 & 3.57 & 1.74 & .559 & .680 & 1.000 &  &  &  \\
+ & LBL1 & 3.40 & 1.74 & .532 & .567 & .517 & 1.000 &  &  \\
+ & LBL2 & 3.20 & 1.65 & .545 & .582 & .504 & .882 & 1.000 &  \\
+ & LBL3 & 3.45 & 1.71 & .567 & .611 & .503 & .889 & .877 & 1.000 \\
+\addlinespace
+Study 3a & FI1 & 4.56 & 1.48 & 1.000 &  &  &  &  &  \\
+ & FI2 & 4.70 & 1.57 & .845 & 1.000 &  &  &  &  \\
+ & FI3 & 4.39 & 1.63 & .704 & .780 & 1.000 &  &  &  \\
+ & LBL1 & 4.40 & 1.52 & .490 & .461 & .482 & 1.000 &  &  \\
+ & LBL2 & 4.44 & 1.64 & .547 & .501 & .501 & .857 & 1.000 &  \\
+ & LBL3 & 4.47 & 1.66 & .456 & .428 & .441 & .912 & .842 & 1.000 \\
+\addlinespace
+Study 3b & FI1 & 4.51 & 1.63 & 1.000 &  &  &  &  &  \\
+ & FI2 & 4.58 & 1.65 & .820 & 1.000 &  &  &  &  \\
+ & FI3 & 4.12 & 1.64 & .622 & .644 & 1.000 &  &  &  \\
+ & LBL1 & 4.39 & 1.60 & .451 & .454 & .470 & 1.000 &  &  \\
+ & LBL2 & 4.33 & 1.60 & .450 & .483 & .468 & .901 & 1.000 &  \\
+ & LBL3 & 4.56 & 1.65 & .401 & .417 & .368 & .863 & .858 & 1.000 \\
+\addlinespace
+Study 3c & FI1 & 4.75 & 1.45 & 1.000 &  &  &  &  &  \\
+ & FI2 & 4.82 & 1.45 & .838 & 1.000 &  &  &  &  \\
+ & FI3 & 4.35 & 1.65 & .614 & .628 & 1.000 &  &  &  \\
+ & LBL1 & 4.37 & 1.61 & .525 & .568 & .586 & 1.000 &  &  \\
+ & LBL2 & 4.33 & 1.64 & .553 & .613 & .592 & .834 & 1.000 &  \\
+ & LBL3 & 4.41 & 1.71 & .476 & .536 & .564 & .859 & .840 & 1.000 \\
+\addlinespace
+\bottomrule
+\end{tabular}
+\raggedright\emph{Note.} FI = Failure Inference; LPL = Loss of Product Luxuriousness; LBL = Loss of Brand Luxuriousness. All items were measured on seven-point scales. All correlations are significant at \emph{p} \textless{} .001.
+\end{singlespace}
+\end{table}
+
+\setcounter{table}{0}
+
+\SIMajorHeading{H-5. X Data: Retrieval Pipeline and Audit Status}
 
 Posts were retrieved with NFT-collection-specific queries combining collection and project names and hashtags with NFT/Web3 disambiguation terms; each post was mapped to a collection slug and inherited that collection's Free/Paid classification. Retrieval returned 33,530 posts, of which 27,467 were English-language. Sequential cleaning steps and their effects on the sample were as follows.
 
@@ -485,11 +592,17 @@ The final sample comprised 22,841 posts across 32 brands (Free 10,381; Paid 12,4
 
 Costa, H., Gil, R., \& Rita, P. (2019). Unfolding the characteristics of incentivized online reviews. \emph{Journal of Retailing and Consumer Services, 52}, 101836. \url{https://doi.org/10.1016/j.jretconser.2018.12.006}
 
+Fornell, C., \& Larcker, D. F. (1981). Evaluating structural equation models with unobservable variables and measurement error. \emph{Journal of Marketing Research, 18}(1), 39--50. \url{https://doi.org/10.1177/002224378101800104}
+
 Hayes, A. F. (2022). \emph{Introduction to mediation, moderation, and conditional process analysis: A regression-based approach} (3rd ed.). Guilford Press.
+
+Henseler, J., Ringle, C. M., \& Sarstedt, M. (2015). A new criterion for assessing discriminant validity in variance-based structural equation modeling. \emph{Journal of the Academy of Marketing Science, 43}(1), 115--135. \url{https://doi.org/10.1007/s11747-014-0403-8}
 
 Hubert, M., Florack, A., Gattringer, R., Eberhardt, T., Enkel, E., \& Kenning, P. (2017). Flag up!\,--- Flagship products as important drivers of perceived brand innovativeness. \emph{Journal of Business Research, 71}, 154--163. \url{https://doi.org/10.1016/j.jbusres.2016.09.001}
 
 Hutto, C. J., \& Gilbert, E. (2014). VADER: A parsimonious rule-based model for sentiment analysis of social media text. \emph{Proceedings of the International AAAI Conference on Web and Social Media, 8}(1), 216--225. \url{https://doi.org/10.1609/icwsm.v8i1.14550}
+
+Kenny, D. A., Kaniskan, B., \& McCoach, D. B. (2015). The performance of RMSEA in models with small degrees of freedom. \emph{Sociological Methods \& Research, 44}(3), 486--507. \url{https://doi.org/10.1177/0049124114543236}
 
 \end{referenceshang}
 \end{document}
