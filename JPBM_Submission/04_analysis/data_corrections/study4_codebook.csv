@@ -1,0 +1,27 @@
+study,variable,label,values,scale,role,notes
+S4,participant_id,Participant ID (sequential),1–N,,ID,Anonymous sequential ID for public release
+S4,date,Response date (date only),YYYY-MM-DD,,metadata,Time removed
+S4,hour,Response start hour,0–23,,metadata,Minutes/seconds removed
+S4,condition,Experimental condition,1–2,,IV,"1=comparable price, 2=free"
+S4,nft_interest,Interest in NFT,numeric,,demographic,
+S4,nft_purchase_exp,NFT purchase experience,1–3,,demographic,
+S4,C1,(undocumented),,,undocumented,Present in study4_public.csv but absent from the original codebook; label to be supplied by the authors
+S4,T0_item1,Pre-launch brand luxuriousness item 1,0–10,11-point slider,item,
+S4,T0_item2,Pre-launch brand luxuriousness item 2,0–10,11-point slider,item,
+S4,T0_item3,Pre-launch brand luxuriousness item 3,0–10,11-point slider,item,
+S4,T1_item1,Post-launch-information brand luxuriousness item 1,0–10,11-point slider,item,
+S4,T1_item2,Post-launch-information brand luxuriousness item 2,0–10,11-point slider,item,
+S4,T1_item3,Post-launch-information brand luxuriousness item 3,0–10,11-point slider,item,
+S4,M1,"(undocumented) 7-point item, forms a scale with M2 and M3",1–7,7-point Likert,undocumented,"Present in study4_public.csv but absent from the original codebook. M1, M2 and M3 form a scale (alpha=.792, analytic sample N=273); not used in any reported analysis. Labels to be supplied by the authors"
+S4,M3,"(undocumented) 7-point item, forms a scale with M1 and M2",1–7,7-point Likert,undocumented,See M1
+S4,M2,"(undocumented) 7-point item, forms a scale with M1 and M3",1–7,7-point Likert,undocumented,See M1
+S4,attention_1,Attention check (correct=1),numeric,,attention_check,"Exclusion criterion. Failed by participants 87, 110, 117, 131, 158, 163"
+S4,T2_item1,Post-displayed-information brand luxuriousness item 1,0–10,11-point slider,item,"Corrected 2026-08-27: the original codebook labelled the T2 block 'post-demand', which is not the vocabulary used in the manuscript"
+S4,T2_item2,Post-displayed-information brand luxuriousness item 2,0–10,11-point slider,item,
+S4,T2_item3,Post-displayed-information brand luxuriousness item 3,0–10,11-point slider,item,
+S4,sex,Sex,numeric,,demographic,
+S4,age,Age category,numeric,,demographic,
+S4,I1,(undocumented),1–4,,undocumented,Present in study4_public.csv but absent from the original codebook; NOT an instructed-response check in this study. Label to be supplied by the authors
+S4,T0,Pre-launch brand luxuriousness (3-item mean),0–10,11-point slider,DV,"alpha=.883 (analytic sample, N=273); mean(T0_item1, T0_item2, T0_item3). Second exclusion criterion (preregistered ceiling rule): exclude if T0 = T1 = T2 = 10. Applied to participants 28, 104, 155"
+S4,T1,Post-launch-information brand luxuriousness (3-item mean),0–10,11-point slider,DV,"alpha=.918 (analytic sample, N=273); mean(T1_item1, T1_item2, T1_item3)"
+S4,T2,Post-displayed-information brand luxuriousness (3-item mean),0–10,11-point slider,DV,"alpha=.922 (analytic sample, N=273); mean(T2_item1, T2_item2, T2_item3)"

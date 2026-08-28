@@ -12,7 +12,7 @@ S3b,S1,(undocumented),,,undocumented,Present in study3b_public.csv but absent fr
 S3b,F1,(undocumented),,,undocumented,Present in study3b_public.csv but absent from the original codebook; label to be supplied by the authors
 S3b,F2,(undocumented),,,undocumented,Present in study3b_public.csv but absent from the original codebook; label to be supplied by the authors
 S3b,flagship_item,Ancillary flagship-product item (single item),1–7,7-point Likert,ancillary,"""I think this NFT is the flagship product of the brand"" (Hubert et al., 2017). Reported in SI H-2 as an ancillary single-item judgment, NOT as a manipulation check. RENAMED 2026-08-27 from Flagshipness_MC"
-S3b,attention_1,Attention check (correct=1),numeric,,attention_check,Exclusion criterion: exclude if not 1. Excludes participant 105 (N=282 -> 281)
+S3b,attention_1,Attention check 1 of 2 (correct=1),numeric,,attention_check,Exclusion criterion. Failed by participant 105
 S3b,F3,(undocumented),,,undocumented,Present in study3b_public.csv but absent from the original codebook; label to be supplied by the authors
 S3b,F4,(undocumented),,,undocumented,Present in study3b_public.csv but absent from the original codebook; label to be supplied by the authors
 S3b,fail_inf_1,Failure inference item 1,1–7,7-point Likert,item,
@@ -21,7 +21,7 @@ S3b,fail_inf_3,Failure inference item 3,1–7,7-point Likert,item,
 S3b,LOB_item1,LOB item 1,1–7,7-point Likert,item,
 S3b,LOB_item2,LOB item 2,1–7,7-point Likert,item,
 S3b,LOB_item3,LOB item 3,1–7,7-point Likert,item,
-S3b,I1,(undocumented),,,undocumented,Present in study3b_public.csv but absent from the original codebook; label to be supplied by the authors
+S3b,I1,Attention check 2 of 2: instructed-response item (correct=6),1–7,7-point Likert,attention_check,"Exclusion criterion. Every participant passed, so the analytic sample is unaffected"
 S3b,sex,Sex,numeric,,demographic,
 S3b,age,Age category,numeric,,demographic,
 S3b,I2,(undocumented),,,undocumented,Present in study3b_public.csv but absent from the original codebook; label to be supplied by the authors
