@@ -1,39 +1,41 @@
-# Figures required by the manuscript and supplement
+# Figures
 
-The ten artwork files below are **not** in this repository. They live in Dropbox at
+The ten artwork files this directory needs are in Dropbox at
 
-    /【研究】/【メタバース】/Revision/NFT_Freemium/JBR_Submission/submission_upload_ready_20260301/figures/
+    /【研究】/【メタバース】/Revision/NFT_Freemium/JPBM_Submission/01_manuscript/working/figures/
 
-Copy that folder's contents into this directory and both documents build with no
-errors at all (verified 2026-08-28 with placeholder artwork of the same names:
-manuscript 46 pages, supplement 28 pages, zero errors, zero undefined references,
-zero overfull boxes over 5pt). The filenames in the Dropbox folder match the ten
-below exactly, so no renaming is needed.
+which is the same relative location as this file, so a synced checkout already
+has them. They are copies of the artwork in the earlier JBR submission folder,
+renamed so that each filename states the figure it is.
+
+Verified 2026-08-28: with all ten present both documents build with zero errors,
+zero undefined references and no overfull box wider than 5pt — manuscript 46
+pages, supplement 28 pages.
 
 ## Manuscript
 
-| Typeset as | File | Caption |
+| Typeset as | File | Renamed from |
 |---|---|---|
-| Figure 1 | `Fig2.png` | Overview of the Preliminary Field Study and the Experiments |
-| Figure 2 | `figure_3_study1.pdf` | Study 1: Loss of Brand Luxuriousness and Behavioral Intention by Price Condition |
-| Figure 3 | `figure_4_study2.jpg` | Study 2: Moderated Mediation Model |
-| Figure 4 | `figure_5_study3b.jpg` | Study 3b: Moderated Mediation Model |
-
-Note the offset: each file's name carries a number one higher than the figure it
-typesets as. This is a leftover of an original Figure 1 that was removed; the
-Dropbox folder still holds that unused artwork as `figure_1_intro.png` and
-`Figure_1_intro_v2.png`. Filenames do not appear in the output, so this is
-cosmetic, but it is a trip hazard when matching artwork to captions.
+| Figure 1 | `figure_1_overview.png` | `Fig2.png` |
+| Figure 2 | `figure_2_study1.pdf` | `figure_3_study1.pdf` |
+| Figure 3 | `figure_3_study2.jpg` | `figure_4_study2.jpg` |
+| Figure 4 | `figure_4_study3b.jpg` | `figure_5_study3b.jpg` |
 
 ## Supplement
 
-| Typeset as | File | Section |
+| Typeset as | File | Renamed from |
 |---|---|---|
-| Figure A1 | `fig_study2_phy.png` + `fig_study2_virt.png` | A-2, Study 2 stimulus images |
-| Figure A2 | `fig_study3a_demand.png` | A-3, Study 3a displayed-information screen |
-| Figure A3 | `fig_study3b_fl_HIGH.png` + `fig_study3b_fl_low.png` | A-4, Study 3b stimulus images |
-| Figure G1 | `figure_6_study4.pdf` | G, Study 4 across time points |
+| Figure A1 left | `figure_A1a_study2_physical.png` | `fig_study2_phy.png` |
+| Figure A1 right | `figure_A1b_study2_digital.png` | `fig_study2_virt.png` |
+| Figure A2 | `figure_A2_study3a_displayed_information.png` | `fig_study3a_demand.png` |
+| Figure A3 left | `figure_A3a_study3b_central_logo.png` | `fig_study3b_fl_HIGH.png` |
+| Figure A3 right | `figure_A3b_study3b_bee_image.png` | `fig_study3b_fl_low.png` |
+| Figure G1 | `figure_G1_study4.pdf` | `figure_6_study4.pdf` |
 
-The two Study 3b filenames read `fl_HIGH` / `fl_low`, which describes the images
-by an attribute the paper does not use to label them; in the caption they are the
-central-GG-logo image and the bee image with a small logo.
+The renaming fixed two hazards in the old names. Every manuscript file carried a
+number one higher than the figure it typeset as, left over from an original
+Figure 1 that was cut; and the two Study 3b stimulus files were named `fl_HIGH`
+and `fl_low`, describing the images by an attribute the paper does not use to
+label them — in the caption they are the central-GG-logo image and the bee image
+with a small logo. The cut Figure 1 artwork (`figure_1_intro.png`,
+`Figure_1_intro_v2.png`) was deliberately not copied.
