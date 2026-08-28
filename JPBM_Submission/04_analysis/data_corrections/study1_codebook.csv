@@ -2,8 +2,8 @@ study,variable,label,values,scale,role,notes
 S1,participant_id,Participant ID (sequential),1–N,,ID,Anonymous sequential ID for public release
 S1,date,Response date (date only),YYYY-MM-DD,,metadata,Time removed
 S1,hour,Response start hour,0–23,,metadata,Minutes/seconds removed
-S1,BI_item1,"Unlabelled item, NOT a component of the BI composite",1–7,7-point Likert,mislabelled,"IMPORTANT (2026-08-27): despite the name, this column is uncorrelated with the stored BI composite (r = -.00) and does not vary by condition (r = -.02). BI cannot be reproduced from BI_item1 and BI_item2; the two items behind BI are not in this file. The reported BI alpha of .97 therefore cannot be verified from the released data. Correct items to be supplied by the authors"
-S1,BI_item2,"Unlabelled item, NOT a component of the BI composite",1–7,7-point Likert,mislabelled,See BI_item1. r with the BI composite = -.01
+S1,BI_item1,Behavioural intention item 1 (row order permuted; see note),1–7,7-point Likert,item_row_order,"CORRECTED 2026-08-28 (supersedes the 2026-08-27 note below): these ARE the two source items of BI. Their row order is permuted relative to the rest of the file, which is why r with the stored BI composite is -.00. Proof of identity: mean(BI_item1,BI_item2) has exactly the same mean (3.944362), the same SD (to 2e-16), and an identical sorted distribution and value-count multiset as the stored BI composite (max|diff of sorted| = 0.0 over all 674 rows); Cronbach's alpha over the two columns is .9723, matching the reported .97. Both columns carry the SAME permutation, so their joint distribution -- and therefore alpha -- is unaffected; only the participant-level alignment to the other columns is broken. No reported analysis is affected: every BI result uses the stored BI column, which is correctly aligned. Authors to re-export these two columns in participant order. SUPERSEDED 2026-08-27 note: 'the two items behind BI are not in this file; alpha .97 cannot be verified' -- that was wrong."
+S1,BI_item2,Behavioural intention item 2 (row order permuted; see note),1–7,7-point Likert,item_row_order,See BI_item1. Carries the same permutation as BI_item1 (r between the two items = +.946).
 S1,SBC123567_d,Self-Brand Connection missing indicator,"1, 0, .",,auxiliary,
 S1,nft_interest,Interest in NFT (screening),1=interested,,,Recruitment: adults 20+ interested in NFT
 S1,comprehension,Content comprehension,1–7,7-point Likert,,
@@ -12,7 +12,7 @@ S1,LOB_item2,LOB item 2: attractiveness diminished,1–7,7-point Likert,item,Att
 S1,LOB_item3,LOB item 3: high-class feel diminished,1–7,7-point Likert,item,High-class feel diminished
 S1,LOB,Loss of brand luxuriousness (3-item mean),continuous,7-point Likert,DV,"alpha=.947 (analytic sample, N=670); mean(LOB_item1, LOB_item2, LOB_item3)"
 S1,A1,Unlabelled survey item (A1),1–7,7-point Likert,unreported_scale,"Unused in every reported analysis. A1, SI1, AT1 and FA1 form a scale (alpha=.812, analytic sample N=670) that is uncorrelated with condition; retained pending the authors' decision on whether to report it. Label to be supplied"
-S1,BI,Behavioral intention (2-item mean),continuous,7-point Likert,DV,"alpha=.972 as originally reported, but see BI_item1: the two source items are not in this file. Condition means 2.85 / 3.70 / 4.11 / 5.12; reproduces the SI H-1 equivalence test exactly"
+S1,BI,Behavioral intention (2-item mean),continuous,7-point Likert,DV,"alpha=.972, verified from BI_item1 and BI_item2 (which are the correct items; see BI_item1 for the row-order issue). Condition means 2.85 / 3.70 / 4.11 / 5.12; reproduces the SI H-1 equivalence test exactly"
 S1,SI1,Unlabelled survey item (SI1),1–7,7-point Likert,unreported_scale,See A1
 S1,AT1,Unlabelled survey item (AT1),1–7,7-point Likert,unreported_scale,See A1
 S1,FA1,Unlabelled survey item (FA1),1–7,7-point Likert,unreported_scale,See A1

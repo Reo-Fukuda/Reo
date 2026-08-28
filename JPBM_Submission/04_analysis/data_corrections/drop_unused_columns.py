@@ -6,9 +6,41 @@ and composite that enters a reported analysis, and any unused column that
 turns out to belong to a multi-item scale -- those are listed in HOLD below
 and stay until the authors decide whether to report them.
 
+Note that neither `I1`/`I2` nor `F1`-`F4` denote the same thing across files.
+`I1` is an instructed-response item in Studies 2, 3a and 3b but a background
+variable in 3c and 4; `F1`-`F4` are a cost/value scale in Study 2 and the
+flagship scale in 3b/3c. Every column below was classified from its own
+content, never from its name.
+
 Usage:  python3 drop_unused_columns.py <src_dir> <dst_dir>
 """
 import csv, io, sys, pathlib
+
+# What each dropped column actually was, established from the data itself
+# (identifications recorded here because the column no longer appears in the codebook):
+WHY = {
+    ("study1_public.csv", "O1"): "unused single item; forms no scale",
+    ("study1_public.csv", "M1"): "unused single item; forms no scale",
+    ("study1_public.csv", "D1"): "unused single item; forms no scale",
+    ("study1_public.csv", "M2"): "unused single item; forms no scale",
+    ("study2_public.csv", "C1"): "condition-recall check (A01/A02, 277/6)",
+    ("study2_public.csv", "NP"): "PRODUCT-FORM recall check: NP=A01 matches physical=1 for 147/149 and "
+                                 "NP=A02 matches physical=0 for 127/134 (9 mismatches). Redundant with the "
+                                 "reported Inferred Cost manipulation check, so dropped under the authors' "
+                                 "decision not to report condition-recall checks",
+    ("study2_public.csv", "I2"): "4-category background variable, not a check",
+    ("study3a_public.csv", "C1"): "condition-recall check",
+    ("study3a_public.csv", "S1"): "condition-recall duplicate of `condition` (r = .99)",
+    ("study3a_public.csv", "I2"): "binary background variable, not a check",
+    ("study3b_public.csv", "C1"): "condition-recall check",
+    ("study3b_public.csv", "S1"): "condition-recall duplicate of `condition`",
+    ("study3b_public.csv", "I2"): "3-category background variable, not a check",
+    ("study3c_public.csv", "S1"): "condition-recall duplicate of `condition`",
+    ("study3c_public.csv", "I1"): "3-category background variable, NOT an instructed-response item "
+                                  "(the letter I is reused across files for different things)",
+    ("study4_public.csv", "C1"): "condition-recall check",
+    ("study4_public.csv", "I1"): "3-category background variable, not a check",
+}
 
 DROP = {
     "study1_public.csv": ["O1", "M1", "D1", "M2"],
