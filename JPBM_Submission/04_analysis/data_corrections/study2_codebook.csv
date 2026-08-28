@@ -7,13 +7,11 @@ S2,physical,Product form,"0=NFT (digital), 1=physical",,IV_factor,PROCESS Model 
 S2,free_dummy,Condition dummy,"0=comparable price, 1=complimentary magazine gift",,IV_factor,"PROCESS Model 7: X. RENAMED 2026-08-27 from paid, whose name read as the opposite of its coding (paid=1 was the complimentary condition); the values are unchanged"
 S2,nft_interest,Interest in NFT,numeric,,demographic,
 S2,nft_purchase_exp,NFT purchase experience,categorical,,demographic,
-S2,C1,(undocumented),,,undocumented,Present in study2_public.csv but absent from the original codebook; label to be supplied by the authors
-S2,NP,(undocumented),,,undocumented,Present in study2_public.csv but absent from the original codebook; label to be supplied by the authors
-S2,F1,(undocumented),,,undocumented,Present in study2_public.csv but absent from the original codebook; label to be supplied by the authors
-S2,F4,(undocumented),,,undocumented,Present in study2_public.csv but absent from the original codebook; label to be supplied by the authors
+S2,F1,Unlabelled survey item (F1),1–7,7-point Likert,unreported_scale,"Unused in every reported analysis. With F1 reverse-scored, F1-F4 form a scale (alpha=.760); retained pending the authors' decision on whether to report it. Label to be supplied"
+S2,F4,Unlabelled survey item (F4),1–7,7-point Likert,unreported_scale,"Unused in every reported analysis. With F1 reverse-scored, F1-F4 form a scale (alpha=.760); retained pending the authors' decision on whether to report it. Label to be supplied"
 S2,attention_1,Attention check 1 of 3 (correct=1),numeric,,attention_check,"Exclusion criterion. Failed by participants 80, 221, 278"
-S2,F2,(undocumented),,,undocumented,Present in study2_public.csv but absent from the original codebook; label to be supplied by the authors
-S2,F3,(undocumented),,,undocumented,Present in study2_public.csv but absent from the original codebook; label to be supplied by the authors
+S2,F2,Unlabelled survey item (F2),1–7,7-point Likert,unreported_scale,"Unused in every reported analysis. With F1 reverse-scored, F1-F4 form a scale (alpha=.760); retained pending the authors' decision on whether to report it. Label to be supplied"
+S2,F3,Unlabelled survey item (F3),1–7,7-point Likert,unreported_scale,"Unused in every reported analysis. With F1 reverse-scored, F1-F4 form a scale (alpha=.760); retained pending the authors' decision on whether to report it. Label to be supplied"
 S2,inferred_cost_1,Inferred cost item 1 (material costs),1–7,7-point Likert,manipulation_check,
 S2,inferred_cost_2,Inferred cost item 2 (production resources),1–7,7-point Likert,manipulation_check,
 S2,inferred_cost_3,Inferred cost item 3 (replication costs),1–7,7-point Likert,manipulation_check,"No composite column is stored; the 3-item mean has alpha=.907 (analytic sample, N=276)"
@@ -28,6 +26,5 @@ S2,LOB_item3,LOB item 3,1–7,7-point Likert,item,
 S2,I1,Attention check 3 of 3: instructed-response item (correct=6),1–7,7-point Likert,attention_check,"Exclusion criterion. Failed by participants 133, 236"
 S2,sex,Sex,numeric,,demographic,
 S2,age,Age category,numeric,,demographic,
-S2,I2,(undocumented),,,undocumented,Present in study2_public.csv but absent from the original codebook; label to be supplied by the authors
 S2,LOB,Loss of brand luxuriousness (3-item mean),continuous,7-point Likert,DV,"alpha=.958 (analytic sample, N=276); mean(LOB_item1, LOB_item2, LOB_item3); PROCESS Model 7: Y"
 S2,loss_product,Loss of product luxuriousness (3-item mean),continuous,7-point Likert,mediator,"alpha=.848 (analytic sample, N=276); mean(loss_prod_1, loss_prod_2, loss_prod_3); PROCESS Model 7: M"

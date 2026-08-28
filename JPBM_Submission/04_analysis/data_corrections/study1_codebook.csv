@@ -1,0 +1,30 @@
+study,variable,label,values,scale,role,notes
+S1,participant_id,Participant ID (sequential),1–N,,ID,Anonymous sequential ID for public release
+S1,date,Response date (date only),YYYY-MM-DD,,metadata,Time removed
+S1,hour,Response start hour,0–23,,metadata,Minutes/seconds removed
+S1,BI_item1,"Unlabelled item, NOT a component of the BI composite",1–7,7-point Likert,mislabelled,"IMPORTANT (2026-08-27): despite the name, this column is uncorrelated with the stored BI composite (r = -.00) and does not vary by condition (r = -.02). BI cannot be reproduced from BI_item1 and BI_item2; the two items behind BI are not in this file. The reported BI alpha of .97 therefore cannot be verified from the released data. Correct items to be supplied by the authors"
+S1,BI_item2,"Unlabelled item, NOT a component of the BI composite",1–7,7-point Likert,mislabelled,See BI_item1. r with the BI composite = -.01
+S1,SBC123567_d,Self-Brand Connection missing indicator,"1, 0, .",,auxiliary,
+S1,nft_interest,Interest in NFT (screening),1=interested,,,Recruitment: adults 20+ interested in NFT
+S1,comprehension,Content comprehension,1–7,7-point Likert,,
+S1,LOB_item1,LOB item 1: luxury diminished,1–7,7-point Likert,item,Luxury diminished
+S1,LOB_item2,LOB item 2: attractiveness diminished,1–7,7-point Likert,item,Attractiveness diminished
+S1,LOB_item3,LOB item 3: high-class feel diminished,1–7,7-point Likert,item,High-class feel diminished
+S1,LOB,Loss of brand luxuriousness (3-item mean),continuous,7-point Likert,DV,"alpha=.947 (analytic sample, N=670); mean(LOB_item1, LOB_item2, LOB_item3)"
+S1,A1,Unlabelled survey item (A1),1–7,7-point Likert,unreported_scale,"Unused in every reported analysis. A1, SI1, AT1 and FA1 form a scale (alpha=.812, analytic sample N=670) that is uncorrelated with condition; retained pending the authors' decision on whether to report it. Label to be supplied"
+S1,BI,Behavioral intention (2-item mean),continuous,7-point Likert,DV,"alpha=.972 as originally reported, but see BI_item1: the two source items are not in this file. Condition means 2.85 / 3.70 / 4.11 / 5.12; reproduces the SI H-1 equivalence test exactly"
+S1,SI1,Unlabelled survey item (SI1),1–7,7-point Likert,unreported_scale,See A1
+S1,AT1,Unlabelled survey item (AT1),1–7,7-point Likert,unreported_scale,See A1
+S1,FA1,Unlabelled survey item (FA1),1–7,7-point Likert,unreported_scale,See A1
+S1,SBC123567,Self-Brand Connection (6-item mean),continuous,7-point Likert,covariate,6 items from Escalas & Bettman (2005). Used as covariate in the SI ANCOVA
+S1,GUCCI_awareness,GUCCI awareness,numeric,,,
+S1,GUCCI_favorability,GUCCI favorability,numeric,,,
+S1,GUCCI_interest,GUCCI interest,numeric,,,
+S1,GUCCI_purchase,GUCCI purchase experience,"1=yes, 2=no",,demographic,Used as covariate in the SI ANCOVA
+S1,nft_purchase_exp,NFT purchase experience,1–3,,demographic,Used as covariate in the SI ANCOVA
+S1,age,Age category,numeric,,demographic,
+S1,sex,Sex,numeric,,demographic,
+S1,marital,Marital status,numeric,,demographic,
+S1,income,Income category,numeric,,demographic,
+S1,condition,Experimental condition,1–4,,IV,"1=high price, 2=comparable, 3=low price, 4=free"
+S1,attention_item_7,Attention check (correct=7),numeric,,attention_check,"Exclusion criterion. Failed by participants 288, 449, 636, 667"
