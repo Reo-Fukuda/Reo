@@ -158,6 +158,31 @@ for i,(lab,want) in enumerate(zip(["T0","T1","T2"],[6.61,5.53,6.52])):
 for i,(lab,want) in enumerate(zip(["T0","T1","T2"],[1.67,1.99,2.04])):
     chk(S,f"{lab} overall SD", Y[:,i].std(ddof=1), want, .006)
 
+
+# ---------------- APPENDIX RELIABILITIES ----------------
+def alpha(X):
+    X = np.asarray(X, float); k = X.shape[1]
+    return k/(k-1) * (1 - X.var(0, ddof=1).sum() / X.sum(1).var(ddof=1))
+
+S = "Appendix reliabilities"
+LOBI = ["LOB_item1", "LOB_item2", "LOB_item3"]
+FII  = ["fail_inf_1", "fail_inf_2", "fail_inf_3"]
+lob = [alpha(analytic(s)[LOBI]) for s in ("study1", "study2", "study3a", "study3b", "study3c")]
+chk(S, "Loss of Brand Luxuriousness min", min(lob), .94, .005)
+chk(S, "Loss of Brand Luxuriousness max", max(lob), .96, .005)
+chk(S, "Loss of Product Luxuriousness (S2)",
+    alpha(analytic("study2")[["loss_prod_1", "loss_prod_2", "loss_prod_3"]]), .85, .005)
+fi = [alpha(analytic(s)[FII]) for s in ("study3a", "study3b", "study3c")]
+chk(S, "Failure Inference min", min(fi), .87, .005)
+chk(S, "Failure Inference max", max(fi), .92, .005)
+chk(S, "Inferred Cost (S2)",
+    alpha(analytic("study2")[[f"inferred_cost_{i}" for i in (1, 2, 3)]]), .91, .005)
+chk(S, "Behavioral Intention (S1)",
+    alpha(analytic("study1")[["BI_item1", "BI_item2"]]), .97, .005)
+for t, want in zip(("T0", "T1", "T2"), (.88, .92, .92)):
+    chk(S, f"Perceived Brand Luxury {t} (S4)",
+        alpha(analytic("study4")[[f"{t}_item{i}" for i in (1, 2, 3)]]), want, .005)
+
 # ---------------- REPORT ----------------
 w = max(len(r[1]) for r in R)
 cur=None; npass=nfail=0
