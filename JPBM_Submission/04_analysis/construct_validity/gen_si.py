@@ -7,11 +7,17 @@ from scipy.stats import chi2 as c2
 FI=['fail_inf_1','fail_inf_2','fail_inf_3']; LB=['LOB_item1','LOB_item2','LOB_item3']
 LP=['loss_prod_1','loss_prod_2','loss_prod_3']
 STUDIES=[
- ("Study 2","../data/study2_public.csv",[("Loss of Product Luxuriousness",LP),("Loss of Brand Luxuriousness",LB)]),
+ ("Study 2","../corrected/study2_public.csv",[("Loss of Product Luxuriousness",LP),("Loss of Brand Luxuriousness",LB)]),
  ("Study 3a","../data/study3a_public.csv",[("Failure Inference",FI),("Loss of Brand Luxuriousness",LB)]),
- ("Study 3b","../data/study3b_public.csv",[("Failure Inference",FI),("Loss of Brand Luxuriousness",LB)]),
- ("Study 3c","../data/study3c_public.csv",[("Failure Inference",FI),("Loss of Brand Luxuriousness",LB)]),
+ ("Study 3b","../corrected/study3b_public.csv",[("Failure Inference",FI),("Loss of Brand Luxuriousness",LB)]),
+ ("Study 3c","../corrected/study3c_public.csv",[("Failure Inference",FI),("Loss of Brand Luxuriousness",LB)]),
 ]
+def analytic(name,d):
+    m = d.attention_1==1
+    if name=="Study 2":  m &= (d.loss_prod_4==6)&(d.I1==6)
+    if name=="Study 3a": m &= (d.I1==6)
+    if name=="Study 3b": m &= (d.I1==6)
+    return d[m]
 def f3(x):
     t = f"{abs(x):.3f}"
     if abs(x) < 1: t = t.lstrip("0")
@@ -20,7 +26,7 @@ def f2(x): return f"{x:.2f}"
 
 res=[]
 for name,path,blocks in STUDIES:
-    d=pd.read_csv(path); a=d[d.attention_1==1]
+    d=pd.read_csv(path); a=analytic(name,d)
     cols=[c for _,it in blocks for c in it]; X=a[cols].astype(float)
     idx=[[0,1,2],[3,4,5]]
     m2=fit_cfa(X.values,idx); m1=fit_cfa(X.values,[list(range(6))])
@@ -96,10 +102,11 @@ W(f"""Three indices point the same way. The latent factor correlations ranged fr
 W("")
 W(r"""Two qualifications belong with these results. First, RMSEA for the two-factor models ranged from """
   + f"{f3(min(r['m2']['rmsea'] for r in res))} to {f3(max(r['m2']['rmsea'] for r in res))}"
-  + r""", exceeding .08 in Studies 3a--3c even though CFI, TLI and SRMR indicated close fit in the same models. This pattern is characteristic of models with few degrees of freedom rather than an indication of a mis-specified factor structure, and we report it rather than selecting indices that favour the model. Second, the evidence here concerns discriminant validity between the measures as scored; it does not establish that Failure Inference captures a causal attribution, and we do not claim that it does (Section H-2 and the main-text limitations).""")
+  + ", exceeding .08 in " + (" and ".join(r['name'] for r in res if r['m2']['rmsea']>.08).replace("Study 3b and Study 3c","Studies 3b and 3c"))
+  + r""" even though CFI, TLI and SRMR indicated close fit in the same models. This pattern is characteristic of models with few degrees of freedom rather than an indication of a mis-specified factor structure, and we report it rather than selecting indices that favour the model. Second, the evidence here concerns discriminant validity between the measures as scored; it does not establish that Failure Inference captures a causal attribution, and we do not claim that it does (Section H-2 and the main-text limitations).""")
 W("")
 # Study 2 three-factor
-d=pd.read_csv("../data/study2_public.csv"); a=d[d.attention_1==1]
+d=pd.read_csv("../corrected/study2_public.csv"); a=analytic("Study 2",d)
 IC=['inferred_cost_1','inferred_cost_2','inferred_cost_3']
 X3=a[LP+LB+IC].astype(float); m3=fit_cfa(X3.values,[[0,1,2],[3,4,5],[6,7,8]])
 W(f"""Study 2 also measured Inferred Cost as a check on the product-form difference. A three-factor model including it fitted well ($\\chi^2$({m3['df']}) = {m3['chi2']:.2f}, CFI = {f3(m3['cfi'])}, TLI = {f3(m3['tli'])}, RMSEA = {f3(m3['rmsea'])}, SRMR = {f3(m3['srmr'])}; $\\alpha$ = {f3(alpha(a[IC]))}), with Inferred Cost correlating $\\varphi$ = {f3(m3['phi'][0,2])} with Loss of Product Luxuriousness and $\\varphi$ = {f3(m3['phi'][1,2])} with Loss of Brand Luxuriousness.""")
