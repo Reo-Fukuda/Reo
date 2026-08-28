@@ -7,12 +7,8 @@ S3b,free_dummy,Condition dummy,"0=comparable price, 1=complimentary fan-book gif
 S3b,central_logo,Image dummy,"0=bee image with a small logo, 1=central GG logo",,IV_factor,"PROCESS Model 7: W. RENAMED 2026-08-27 from low_flagship, whose name read as the opposite of its coding; the values are unchanged"
 S3b,nft_interest,Interest in NFT,numeric,,demographic,
 S3b,nft_purchase_exp,NFT purchase experience,1–3,,demographic,
-S3b,F1,Unlabelled survey item (F1),1–7,7-point Likert,unreported_scale,"Unused in every reported analysis. With flagship_item, F1-F4 form a five-item scale (alpha=.930); retained pending the authors' decision on whether to report it. Label to be supplied"
-S3b,F2,Unlabelled survey item (F2),1–7,7-point Likert,unreported_scale,"Unused in every reported analysis. With flagship_item, F1-F4 form a five-item scale (alpha=.930); retained pending the authors' decision on whether to report it. Label to be supplied"
 S3b,flagship_item,Ancillary flagship-product item (single item),1–7,7-point Likert,ancillary,"""I think this NFT is the flagship product of the brand"" (Hubert et al., 2017). Reported in SI H-2 as an ancillary single-item judgment, NOT as a manipulation check. RENAMED 2026-08-27 from Flagshipness_MC"
 S3b,attention_1,Attention check 1 of 2 (correct=1),numeric,,attention_check,Exclusion criterion. Failed by participant 105
-S3b,F3,Unlabelled survey item (F3),1–7,7-point Likert,unreported_scale,"Unused in every reported analysis. With flagship_item, F1-F4 form a five-item scale (alpha=.930); retained pending the authors' decision on whether to report it. Label to be supplied"
-S3b,F4,Unlabelled survey item (F4),1–7,7-point Likert,unreported_scale,"Unused in every reported analysis. With flagship_item, F1-F4 form a five-item scale (alpha=.930); retained pending the authors' decision on whether to report it. Label to be supplied"
 S3b,fail_inf_1,Failure inference item 1,1–7,7-point Likert,item,
 S3b,fail_inf_2,Failure inference item 2,1–7,7-point Likert,item,
 S3b,fail_inf_3,Failure inference item 3,1–7,7-point Likert,item,

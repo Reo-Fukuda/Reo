@@ -11,11 +11,7 @@ S1,LOB_item1,LOB item 1: luxury diminished,1–7,7-point Likert,item,Luxury dimi
 S1,LOB_item2,LOB item 2: attractiveness diminished,1–7,7-point Likert,item,Attractiveness diminished
 S1,LOB_item3,LOB item 3: high-class feel diminished,1–7,7-point Likert,item,High-class feel diminished
 S1,LOB,Loss of brand luxuriousness (3-item mean),continuous,7-point Likert,DV,"alpha=.947 (analytic sample, N=670); mean(LOB_item1, LOB_item2, LOB_item3)"
-S1,A1,Unlabelled survey item (A1),1–7,7-point Likert,unreported_scale,"Unused in every reported analysis. A1, SI1, AT1 and FA1 form a scale (alpha=.812, analytic sample N=670) that is uncorrelated with condition; retained pending the authors' decision on whether to report it. Label to be supplied"
 S1,BI,Behavioral intention (2-item mean),continuous,7-point Likert,DV,"alpha=.972, verified from BI_item1 and BI_item2 (which are the correct items; see BI_item1 for the row-order issue). Condition means 2.85 / 3.70 / 4.11 / 5.12; reproduces the SI H-1 equivalence test exactly"
-S1,SI1,Unlabelled survey item (SI1),1–7,7-point Likert,unreported_scale,See A1
-S1,AT1,Unlabelled survey item (AT1),1–7,7-point Likert,unreported_scale,See A1
-S1,FA1,Unlabelled survey item (FA1),1–7,7-point Likert,unreported_scale,See A1
 S1,SBC123567,Self-Brand Connection (6-item mean),continuous,7-point Likert,covariate,6 items from Escalas & Bettman (2005). Used as covariate in the SI ANCOVA
 S1,GUCCI_awareness,GUCCI awareness,numeric,,,
 S1,GUCCI_favorability,GUCCI favorability,numeric,,,

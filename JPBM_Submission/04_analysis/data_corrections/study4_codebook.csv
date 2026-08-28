@@ -11,9 +11,6 @@ S4,T0_item3,Pre-launch brand luxuriousness item 3,0–10,11-point slider,item,
 S4,T1_item1,Post-launch-information brand luxuriousness item 1,0–10,11-point slider,item,
 S4,T1_item2,Post-launch-information brand luxuriousness item 2,0–10,11-point slider,item,
 S4,T1_item3,Post-launch-information brand luxuriousness item 3,0–10,11-point slider,item,
-S4,M1,Unlabelled survey item (M1),1–7,7-point Likert,unreported_scale,"Unused in every reported analysis. M1, M2 and M3 form a scale (alpha=.792); retained pending the authors' decision on whether to report it. Label to be supplied"
-S4,M3,Unlabelled survey item (M3),1–7,7-point Likert,unreported_scale,"Unused in every reported analysis. M1, M2 and M3 form a scale (alpha=.792); retained pending the authors' decision on whether to report it. Label to be supplied"
-S4,M2,Unlabelled survey item (M2),1–7,7-point Likert,unreported_scale,"Unused in every reported analysis. M1, M2 and M3 form a scale (alpha=.792); retained pending the authors' decision on whether to report it. Label to be supplied"
 S4,attention_1,Attention check (correct=1),numeric,,attention_check,"Exclusion criterion. Failed by participants 87, 110, 117, 131, 158, 163"
 S4,T2_item1,Post-displayed-information brand luxuriousness item 1,0–10,11-point slider,item,"Corrected 2026-08-27: the original codebook labelled the T2 block 'post-demand', which is not the vocabulary used in the manuscript"
 S4,T2_item2,Post-displayed-information brand luxuriousness item 2,0–10,11-point slider,item,
