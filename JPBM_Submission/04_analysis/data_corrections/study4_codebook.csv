@@ -1,6 +1,6 @@
 study,variable,label,values,scale,role,notes
 S4,participant_id,Participant ID (sequential),1–N,,ID,Anonymous sequential ID for public release
-S4,date,Response date (date only),YYYY-MM-DD,,metadata,Time removed
+S4,date,Response date (date only),YYYY/M/D,,metadata,"Time removed. CORRECTED 2026-08-28: the format is as stated here; the earlier codebooks recorded YYYY-MM-DD for every file, which matches study2 only."
 S4,hour,Response start hour,0–23,,metadata,Minutes/seconds removed
 S4,condition,Experimental condition,1–2,,IV,"1=comparable price, 2=free"
 S4,nft_interest,Interest in NFT,numeric,,demographic,

@@ -1,6 +1,6 @@
 study,variable,label,values,scale,role,notes
 S2,participant_id,Participant ID (sequential),1–N,,ID,Anonymous sequential ID for public release
-S2,date,Response date (date only),YYYY-MM-DD,,metadata,Time removed
+S2,date,Response date (date only),YYYY-MM-DD,,metadata,"Time removed. CORRECTED 2026-08-28: the format is as stated here; the earlier codebooks recorded YYYY-MM-DD for every file, which matches study2 only."
 S2,hour,Response start hour,0–23,,metadata,Minutes/seconds removed
 S2,condition,Experimental condition,1–4,,IV,"1=physical + complimentary magazine gift, 2=physical + comparable price, 3=NFT + comparable price, 4=NFT + complimentary magazine gift"
 S2,physical,Product form,"0=NFT (digital), 1=physical",,IV_factor,PROCESS Model 7: W

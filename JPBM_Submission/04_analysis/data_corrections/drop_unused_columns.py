@@ -18,7 +18,8 @@ import csv, io, sys, pathlib
 #   "unused" -- a variable no reported analysis uses
 WHY = {
     "study1_public.csv":  {"O1": "unused", "M1": "unused", "D1": "unused", "M2": "unused",
-                           "A1": "unused", "SI1": "unused", "AT1": "unused", "FA1": "unused"},
+                           "A1": "unused", "SI1": "unused", "AT1": "unused", "FA1": "unused",
+                           "SBC123567_d": "unused"},
     "study2_public.csv":  {"C1": "check", "NP": "check", "I2": "unused",
                            "F1": "unused", "F2": "unused", "F3": "unused", "F4": "unused"},
     "study3a_public.csv": {"C1": "check", "S1": "check", "I2": "unused", "F1": "unused"},
@@ -31,7 +32,8 @@ WHY = {
 }
 
 DROP = {
-    "study1_public.csv": ["O1", "M1", "D1", "M2", "A1", "SI1", "AT1", "FA1"],
+    "study1_public.csv": ["O1", "M1", "D1", "M2", "A1", "SI1", "AT1", "FA1",
+                          "SBC123567_d"],
     "study2_public.csv": ["C1", "NP", "I2", "F1", "F2", "F3", "F4"],
     "study3a_public.csv": ["C1", "S1", "I2", "F1"],
     "study3b_public.csv": ["C1", "S1", "I2", "F1", "F2", "F3", "F4"],

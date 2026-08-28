@@ -1,6 +1,6 @@
 study,variable,label,values,scale,role,notes
 S3b,participant_id,Participant ID (sequential),1–N,,ID,Anonymous sequential ID for public release
-S3b,date,Response date (date only),YYYY-MM-DD,,metadata,Time removed
+S3b,date,Response date (date only),YYYY/M/D,,metadata,"Time removed. CORRECTED 2026-08-28: the format is as stated here; the earlier codebooks recorded YYYY-MM-DD for every file, which matches study2 only."
 S3b,hour,Response start hour,0–23,,metadata,Minutes/seconds removed
 S3b,condition,Experimental condition,1–4,,IV,"1=central GG logo + comparable price, 2=central GG logo + complimentary fan-book gift, 3=bee image + comparable price, 4=bee image + complimentary fan-book gift"
 S3b,free_dummy,Condition dummy,"0=comparable price, 1=complimentary fan-book gift",,IV_factor,PROCESS Model 7: X
