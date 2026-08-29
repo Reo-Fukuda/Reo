@@ -254,8 +254,6 @@ Direct effect ($c'$) & 0.07 & 0.24 & {[}-0.39, 0.54{]} \\
 \SIAnchorHeading{si:d}{D. Preliminary Field Study: OpenSea Floor-Price Analysis}
 
 This section provides details of the marketplace analysis reported in the main text. As of April 2025, 77 brand-related collections were retrieved from OpenSea, of which 65 collections tied to the 32 focal brands were retained for analysis. Collections were classified as Free (\emph{N} = 37) or Paid (\emph{N} = 28) based on primary-market mint price. Descriptive statistics appear in Table D1.
-% TODO(lineage): the full derivation from the 6,209-row raw export is being
-% re-documented (99_documentation/DATA_AND_REPRODUCIBILITY_GAPS.md).
 \setcounter{table}{0}
 \renewcommand{\thetable}{D\arabic{table}}
 \renewcommand{\theHtable}{D\arabic{table}}
@@ -350,7 +348,7 @@ In the interaction analysis reported in the main text, Paid $\times$ Luxury was 
 
 This section supplements the X (formerly Twitter) analysis reported in the main text. The analytical sample comprised 22,841 English-language posts retrieved with NFT-collection-specific queries for collections of the same 32 brands (February 9, 2022 through April 28, 2025); the retrieval and cleaning pipeline is documented in Section H. Brand classification followed Section E (Luxury = 10, Non-Luxury = 22).
 
-Each post was scored with VADER sentiment analysis (Hutto and Gilbert, 2014), implemented in a manner consistent with prior online-review research (Costa et al., 2019). Estimation proceeded in two tracks: (1) a linear mixed model (LMM) with brand as a random intercept and calendar time as a covariate, and (2) a generalized estimating equations (GEE) model with negative posts (compound $\leq$ -0.05) as the outcome. The Free/Paid classification was coded as paid (0 = Free, 1 = Paid), and brand type was coded as luxury (0 = Non-Luxury, 1 = Luxury). GEE yields standard errors that are robust to within-brand correlation in the post-level data.
+Each post was scored with VADER sentiment analysis (Hutto and Gilbert, 2014), implemented in a manner consistent with prior online-review research (Costa \emph{et al.}, 2019). Estimation proceeded in two tracks: (1) a linear mixed model (LMM) with brand as a random intercept and calendar time as a covariate, and (2) a generalized estimating equations (GEE) model with negative posts (compound $\leq$ -0.05) as the outcome. The Free/Paid classification was coded as paid (0 = Free, 1 = Paid), and brand type was coded as luxury (0 = Non-Luxury, 1 = Luxury). GEE yields standard errors that are robust to within-brand correlation in the post-level data.
 
 \noindent \textbf{Key results:}
 
@@ -442,7 +440,7 @@ The main text reports that the non-significant difference between the free and c
 
 \SIMajorHeading{H-2. The Ancillary Flagship-Product Item in Study 3b}
 
-One item, ``I think this NFT is the flagship product of the brand'' (adapted from Hubert et al., 2017), is reported here for Study 3b. Scores were higher for the image with a central GG logo (\emph{M} = 4.94, \emph{SD} = 1.46) than for the bee image with a small logo (\emph{M} = 2.67, \emph{SD} = 1.42; Welch's \emph{t}(277.17) = 13.22, \emph{p} \textless{} .001, \emph{d} = 1.57). We report this as an ancillary single-item judgment rather than as a manipulation check. The item asks whether the NFT appears to be the brand's flagship product; it does not measure logo prominence, which is what the image contrast manipulates, and the two images differ visibly in any case. It is therefore not treated as a validation of the image manipulation, and no claim about construct validity rests on it.
+One item, ``I think this NFT is the flagship product of the brand'' (adapted from Hubert \emph{et al.}, 2017), is reported here for Study 3b. Scores were higher for the image with a central GG logo (\emph{M} = 4.94, \emph{SD} = 1.46) than for the bee image with a small logo (\emph{M} = 2.67, \emph{SD} = 1.42; Welch's \emph{t}(277.17) = 13.22, \emph{p} \textless{} .001, \emph{d} = 1.57). We report this as an ancillary single-item judgment rather than as a manipulation check. The item asks whether the NFT appears to be the brand's flagship product; it does not measure logo prominence, which is what the image contrast manipulates, and the two images differ visibly in any case. It is therefore not treated as a validation of the image manipulation, and no claim about construct validity rests on it.
 
 Study 3c did not include a source manipulation-specific check. The same flagship-product item was administered in that study, but because it does not bear on where the launch and outcome information were presented, it is not reported as a check of the source manipulation. Manipulation-specific, multi-item checks are a priority for future data collection.
 
@@ -454,7 +452,7 @@ The free or complimentary condition was implemented differently across studies (
 
 Several of the measures analysed together were collected from the same respondents within a single questionnaire and share negatively valenced wording. This raises the question of whether they behave as distinct constructs or largely as one general negative reaction. This section reports confirmatory factor analyses and discriminant-validity indices for the two pairings that enter the mediation models: Loss of Product Luxuriousness with Loss of Brand Luxuriousness in Study 2, and Failure Inference with Loss of Brand Luxuriousness in Studies 3a--3c.
 
-Each model was estimated by maximum likelihood on that study's analytic sample (defined by the instructed-response checks listed in H-5), with factor variances fixed at unity and each item free to load only on its assigned factor. Because these are six-indicator models with eight degrees of freedom, we report CFI, TLI and SRMR alongside RMSEA: in models with few degrees of freedom RMSEA tends to be inflated and to reject correctly specified models, so it is best read together with the other indices rather than on its own (Kenny et al., 2015). Table H1 compares the fit of the hypothesised two-factor model with a one-factor alternative in which all six items load on a single factor.
+Each model was estimated by maximum likelihood on that study's analytic sample (defined by the instructed-response checks listed in H-5), with factor variances fixed at unity and each item free to load only on its assigned factor. Because these are six-indicator models with eight degrees of freedom, we report CFI, TLI and SRMR alongside RMSEA: in models with few degrees of freedom RMSEA tends to be inflated and to reject correctly specified models, so it is best read together with the other indices rather than on its own (Kenny \emph{et al.}, 2015). Table H1 compares the fit of the hypothesised two-factor model with a one-factor alternative in which all six items load on a single factor.
 
 \setcounter{table}{0}
 \renewcommand{\thetable}{H\arabic{table}}
@@ -519,7 +517,7 @@ Study 3c & Failure Inference & .697--.930 & .866 & .882 & .716 & .846 \\
 \end{singlespace}
 \end{table}
 
-Three indices point the same way. The latent factor correlations ranged from .543 to .707: substantial, as one would expect of judgments formed in the same session about the same offering, but well short of unity. Average variance extracted exceeded .50 for every construct (range .664 to .885), and in each study the square root of the average variance extracted for both constructs exceeded their correlation, satisfying the Fornell and Larcker (1981) criterion. The heterotrait--monotrait ratio ranged from .565 to .728, below the .85 threshold recommended by Henseler et al. (2015) in every study. Table H2 reports these indices by study.
+Three indices point the same way. The latent factor correlations ranged from .543 to .707: substantial, as one would expect of judgments formed in the same session about the same offering, but well short of unity. Average variance extracted exceeded .50 for every construct (range .664 to .885), and in each study the square root of the average variance extracted for both constructs exceeded their correlation, satisfying the Fornell and Larcker (1981) criterion. The heterotrait--monotrait ratio ranged from .565 to .728, below the .85 threshold recommended by Henseler \emph{et al.} (2015) in every study. Table H2 reports these indices by study.
 
 Two qualifications belong with these results. First, RMSEA for the two-factor models ranged from .044 to .126, exceeding .08 in Studies 3b and 3c even though CFI, TLI and SRMR indicated close fit in the same models. This pattern is characteristic of models with few degrees of freedom rather than an indication of a mis-specified factor structure, and we report it rather than selecting indices that favour the model. Second, the evidence here concerns discriminant validity between the measures as scored; it does not establish that Failure Inference captures a causal attribution, and we do not claim that it does (Section H-2 and the main-text limitations).
 
@@ -622,8 +620,6 @@ Brands with fewer than 10 posts & 6 & 22,841 \\
 \end{table}
 
 The final sample comprised 22,841 posts across 32 brands (Free 10,381; Paid 12,460). Three audit points remain open and are disclosed in the main text. First, official brand and project accounts were not separately excluded; an account-level audit is planned. Second, query precision and duplicate assignment across collections have not been fully audited beyond the duplicate-ID removal above. Third, the models cluster posts by brand, whereas the Free/Paid classification varies at the collection level; collection-level clustering is a target of ongoing reanalysis. In addition, only three luxury brands contributed Free-classified collections (and only one brand contributed both Free and Paid collections), so the Luxury interaction reported in the main text is estimated primarily from between-brand comparisons and is presented as exploratory heterogeneity.
-% TODO(lineage): counts and audit status to be finalized against the
-% reproducibility audit (99_documentation/DATA_AND_REPRODUCIBILITY_GAPS.md).
 
 \newpage
 \noindent \textbf{References}
@@ -637,7 +633,7 @@ Hayes, A.F. (2022), \emph{Introduction to Mediation, Moderation, and Conditional
 
 Henseler, J., Ringle, C.M. and Sarstedt, M. (2015), ``A new criterion for assessing discriminant validity in variance-based structural equation modeling'', \emph{Journal of the Academy of Marketing Science}, Vol. 43 No. 1, pp. 115--135, doi: 10.1007/s11747-014-0403-8.
 
-Hubert, M., Florack, A., Gattringer, R., Eberhardt, T., Enkel, E. and Kenning, P. (2017), ``Flag up!\,--- Flagship products as important drivers of perceived brand innovativeness'', \emph{Journal of Business Research}, Vol. 71, pp. 154--163, doi: 10.1016/j.jbusres.2016.09.001.
+Hubert, M., Florack, A., Gattringer, R., Eberhardt, T., Enkel, E. and Kenning, P. (2017), ``Flag up!\,--- flagship products as important drivers of perceived brand innovativeness'', \emph{Journal of Business Research}, Vol. 71, pp. 154--163, doi: 10.1016/j.jbusres.2016.09.001.
 
 Hutto, C.J. and Gilbert, E. (2014), ``VADER: a parsimonious rule-based model for sentiment analysis of social media text'', \emph{Proceedings of the International AAAI Conference on Web and Social Media}, Vol. 8 No. 1, pp. 216--225, doi: 10.1609/icwsm.v8i1.14550.
 
